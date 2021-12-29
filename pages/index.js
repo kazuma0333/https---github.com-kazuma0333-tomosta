@@ -9,6 +9,7 @@ import Content from './commponents/content'
 export default function Home() {
   let title = 'ともすた'
   const {data, error} = useSWR('/api/message')
+  console.log(data)
   if (error) return <div>not load</div>
   if (!data) return <div>loading now</div>
 
